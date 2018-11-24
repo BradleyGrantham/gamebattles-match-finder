@@ -1,7 +1,12 @@
 # Gamebattles cli
 
+[![Python 3.6](https://img.shields.io/badge/python-3.6-blue.svg)](https://www.python.org/downloads/release/python-360/)
+[![Twitter Follow](https://img.shields.io/twitter/follow/espadrine.svg?style=social&label=Follow)](https://twitter.com/BradleyGrantham)
+
 ## Installation
-For installation you will need `python>3.6` and `pip`.
+For installation you will need 
+[Python 3.6](https://www.python.org/downloads/release/python-360/) 
+and [pip](https://pypi.org/project/pip/).
 
 ```bash
 git clone https://github.com/BradleyGrantham/gamebattles-match-finder.git
