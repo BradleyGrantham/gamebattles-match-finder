@@ -3,6 +3,7 @@ import warnings
 warnings.filterwarnings("ignore")
 
 import gamebattles.gb as gb
+import gamebattles.exceptions
 
 
 @click.group()
@@ -32,6 +33,7 @@ def cli_get_match(players, rule_set, game_mode, games, team_id, dryrun,
 
 @cli.command(name='report-and-get-new')
 @click.argument('players', nargs=-1)
+@click.option('--win/--no-win', prompt=True, default=False)
 @click.option('--rule-set', default='cwl')
 @click.option('--game-mode', default='var')
 @click.option('--games', default=3)
@@ -42,7 +44,10 @@ def cli_get_match(players, rule_set, game_mode, games, team_id, dryrun,
 def cli_report_and_get_new(players, win, rule_set, game_mode, games, team_id,
                            dryrun, keep_trying):
     gb.check_team_details()
-    gb.report_most_recent(win, team_id)
+    try:
+        gb.report_most_recent(win, team_id)
+    except gamebattles.exceptions.NoMatchesToReport:
+        print("No matches to report. Finding a new game anyway...")
     gb.get_match(players,
                  rule_set,
                  game_mode,
@@ -50,6 +55,7 @@ def cli_report_and_get_new(players, win, rule_set, game_mode, games, team_id,
                  team_id,
                  dryrun,
                  keep_trying)
+
 
 
 @cli.command(name='report')
