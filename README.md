@@ -28,6 +28,9 @@ export MLG_GAME=call-of-duty-black-ops-4
 export MLG_COOKIE=0a1b2c3d4e5f6g
 ```
 
+> If you want these to be available from session to session, it's best to add them
+to you `.bash_profile`
+
 ### Finding your team id
 To find your team id, navigate to your teams page. 
 In the url bar you will see something similar to 
