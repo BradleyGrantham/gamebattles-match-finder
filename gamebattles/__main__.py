@@ -57,7 +57,6 @@ def cli_report_and_get_new(players, win, rule_set, game_mode, games, team_id,
                  keep_trying)
 
 
-
 @cli.command(name='report')
 @click.option('--win/--no-win', prompt=True, default=False)
 @click.option('--team-id', default=None)
