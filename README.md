@@ -18,7 +18,7 @@ pip install .
 To get the package working, you need to provide the a few details:
   * Your MLG email - `MLG_USER`
   * Your MLG password - `MLG_PASSWORD`
-  * Your team id - `MLG_TEAM`
+  * Your team id - `MLG_TEAM_ID`
   * The game your team plays - `MLG_GAME`
   * A specific session cookie - `MLG_COOKIE`
   
@@ -28,7 +28,7 @@ For example:
 ```bash
 export MLG_USER=me@example.com
 export MLG_PASSWORD=password
-export MLG_TEAM=00000000
+export MLG_TEAM_ID=00000000
 export MLG_GAME=call-of-duty-black-ops-4
 export MLG_COOKIE=0a1b2c3d4e5f6g
 ```
